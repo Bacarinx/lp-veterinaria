@@ -2,26 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.whats-btn {
+    @apply bg-green-400 text-white border-2 border-white rounded-lg px-6 py-4
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.experience-btn {
+    @apply bg-orange-700 text-white border-2 border-white rounded-lg px-6 py-4
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.whats-btn:hover {
+    @apply border-2 border-green-400 bg-white text-green-400
 }
+
+.experience-btn:hover {
+    @apply border-2 border-orange-700 bg-white text-orange-700
+}
+
+.circular-progress{
+    position: relative;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.progress-value {
+    position: relative;
+    font-size: 50px;
+}
+
+@media (min-width: 768px) {
+    .card-title{grid-area: title;}
+    .card-p1{grid-area: p1;} 
+    .card-p2{grid-area: p2;} 
+    .card-btn{grid-area: btn;}
+    .card-img{grid-area: img;} 
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 40px;
+        grid-template-areas: 
+            "title img"
+            "p1 img"
+            "p2 img"
+            "btn img";
+        }
+
+    .container2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 40px;
+        grid-template-areas: 
+            "img title"
+            "img p1"
+            "img p2"
+            "img btn";
+    }
+
+
+    .header-logo{grid-area: logo;}
+    .header-subtitle{grid-area: subtitle;}
+    .header-title{grid-area: title;}
+    .header-body{grid-area: body;}
+    .header-buttons{grid-area: buttons;}
+    .header-img{grid-area: img;}
+
+    .header-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 120px;
+        grid-template-areas: 
+            "subtitle ."
+            "title ."
+            "body .";
+    }
+
+}
+
+
+
+
+
