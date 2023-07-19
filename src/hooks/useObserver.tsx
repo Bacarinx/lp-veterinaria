@@ -16,5 +16,5 @@ export default function useObserver() {
     return () => observer.disconnect()
   }, [inIntersecting])
 
-  return { inIntersecting, ref }
+  return { inIntersecting, setInIntersecting, ref }
 }
