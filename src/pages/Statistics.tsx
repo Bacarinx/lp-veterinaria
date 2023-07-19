@@ -1,12 +1,11 @@
 import Statistic from '@/Components/Statistic'
-
 import house from '../../public/assets/data/house.png'
 import estados from '../../public/assets/data/estados.png'
 import dog from '../../public/assets/data/dog.png'
 
 export default function Statistics() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center m-auto w-[90%] pt-12 gap-6">
+    <div className="flex flex-col md:flex-row items-center justify-center m-auto w-[90%] pt-12 gap-6 division">
       <Statistic
         startValue={0}
         finalValue={310}

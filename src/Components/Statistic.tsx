@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import useObserver from '@/hooks/useObserver'
 
 interface statiscProps {
   startValue: number
@@ -18,23 +19,26 @@ export default function Statistic({
   body1,
   body2,
 }: statiscProps) {
-  const [value, setValue] = useState<number>(startValue)
+  const { inIntersecting, ref } = useObserver()
 
+  const [value, setValue] = useState<number>(startValue)
   const quantity = 2400 / 100
   const sum = finalValue / quantity
   const porcent = 100 / (finalValue - startValue)
 
   useEffect(() => {
-    const intervalo = setInterval(() => {
-      if (value < finalValue) {
-        setValue(value + sum)
-      }
-    }, 100)
-    return () => clearInterval(intervalo)
-  }, [value, finalValue, sum])
+    if (inIntersecting) {
+      const intervalo = setInterval(() => {
+        if (value < finalValue) {
+          setValue(value + sum)
+        }
+      }, 100)
+      return () => clearInterval(intervalo)
+    }
+  }, [value, finalValue, sum, inIntersecting])
 
   return (
-    <div className="flex flex-col justify-start items-center">
+    <div className="flex flex-col justify-start items-center" ref={ref}>
       <div
         className="circular-progress"
         style={{
