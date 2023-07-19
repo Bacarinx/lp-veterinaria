@@ -9,7 +9,7 @@ export default function useObserver() {
       ([entry]) => {
         setInIntersecting(entry.isIntersecting)
       },
-      { rootMargin: '-300px' },
+      { rootMargin: '-200px' },
     )
     console.log(inIntersecting)
     observer.observe(ref.current!)
