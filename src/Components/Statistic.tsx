@@ -1,13 +1,13 @@
 'use client'
 
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { useEffect, useState } from 'react'
 import useObserver from '@/hooks/useObserver'
 
 interface statiscProps {
   startValue: number
   finalValue: number
-  image: any
+  image: StaticImageData
   body1?: string
   body2?: string
 }

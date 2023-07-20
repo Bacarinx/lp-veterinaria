@@ -1,11 +1,11 @@
 'use client'
 
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
 
 interface AnimatedIconProps {
-  estatico: any
-  dinamico: any
+  estatico: StaticImageData
+  dinamico: StaticImageData
   alt: string
   prop: number
 }
