@@ -1,9 +1,10 @@
+import { StaticImageData } from 'next/image'
 import { AnimatedIcon } from './AnimatedIcon'
 
 interface CaracteristicaProps {
-  image: any
+  image: { dina: StaticImageData; esta: StaticImageData }
   title: string
-  body: any
+  body: string
 }
 
 export default function Caracteristica({

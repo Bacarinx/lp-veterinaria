@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 interface ClientProps {
   body: string
   body2: string
-  client: any
+  client: { image: StaticImageData; names: string; local: string }
 }
 
 export default function Client(props: ClientProps) {

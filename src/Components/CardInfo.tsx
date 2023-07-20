@@ -1,12 +1,12 @@
 'use client'
 
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { ExpBtn } from './Buttons'
 import { useEffect, useState } from 'react'
 import useObserver from '@/hooks/useObserver'
 
 interface CardProps {
-  image: any
+  image: StaticImageData
   title: string
   body: string
   body2?: string
