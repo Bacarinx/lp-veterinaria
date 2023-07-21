@@ -24,30 +24,24 @@ export default function Caracteristicas() {
               dina: produtividadeD,
               esta: produtividadeE,
             }}
-            title={'Produtividade'}
-            body={
-              'Aumente a produtividade da sua clínica veterinária em até 30% com as nossas soluções.'
-            }
+            title="Produtividade"
+            body="Aumente a produtividade da sua clínica veterinária em até 30% com as nossas soluções."
           />
           <Caracteristica
             image={{
               dina: veterinariaD,
               esta: veterinariaE,
             }}
-            title={'Foco na área veterinária'}
-            body={
-              'Equipe formada por profissionais especializados em TI e apaixonados por animais, garantindo que nossas soluções atendam às necessidades do setor veterinário..'
-            }
+            title="Foco na área veterinária"
+            body="Equipe formada por profissionais especializados em TI e apaixonados por animais, garantindo que nossas soluções atendam às necessidades do setor veterinário.."
           />
           <Caracteristica
             image={{
               dina: globoD,
               esta: globoE,
             }}
-            title={'Suporte humaizado'}
-            body={
-              'Oferecemos suporte técnico especializado e humanizado para auxiliá-lo em quaisquer possíveis dúvidas ou dificuldades que surgir.'
-            }
+            title="Suporte humaizado"
+            body="Oferecemos suporte técnico especializado e humanizado para auxiliá-lo em quaisquer possíveis dúvidas ou dificuldades que surgir."
           />
         </div>
         <div className="flex items-center justify-center">
